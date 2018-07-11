@@ -1,0 +1,36 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: utf-8
+logging:
+  level:
+    org.springframework: warn
+    org.spring.springboot.dao: debug
+spring:
+  thymeleaf:
+    cache: false
+    mode: HTML
+    encoding: UTF-8
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  datasource:
+    hikari:
+      read-only:
+captcha:
+  captchaEbabled: true
+  captchaType: math
+shiro:
+  user:
+    loginUrl: /login
+    unauthorizedUrl: /unauth
+    indexUrl: /index
+  cookie:
+    domain:
+    path: /
+    httpOnly: true
+    maxAge: 30
+  session:
+    expireTime: 30
+    dbSyncPeriod: 1
+    validationInterval: 10
